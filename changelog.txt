@@ -1,3 +1,88 @@
+VERSION[beta][2026/05/22]
+
+--- New to Path of Building ---
+* Add "aoe" filtering for gem search (github-actions[bot])
+* Add support for The Vertex "skill gems have no attribute requirement" (Blitz54)
+* Show Sanctified text on tooltip (Blitz54)
+* Add support for more reservation efficiency and non-minion skill pre … (ibabde)
+* Adding DPS calculation for Firestorm, Rain of Arrows, Icestorm, Thunderstorm and Volcano (MrHB212)
+* Added support for the Decompose Poison Cloud (TarikBeentjes61)
+* Add progress bar to power report (github-actions[bot])
+* Add support for 'Non-Channelling Spells have 3% increased Magnitude of Ailments per 100 maximum Life' (jacul)
+* Fix URL spoofing issue with imported URLs (github-actions[bot])
+* Remember league for imported characters (github-actions[bot])
+* Copy anoints and augments when comparing items, also change jewel socket comparison order (vaisest)
+* Add build comparison tab (vaisest)
+* Add support for Jarngreipr's Strength mod (Peechey)
+* Add support for Sacrosanctum's Energy Shield Recoup mod (Peechey)
+* Add support for Silks of Veneration and The Mutable Star's Current Energy Shield mods (Peechey)
+* Add support for Strugglescream (Peechey)
+* Add support for Solus Ipse's Lineage Support mod (Peechey)
+* Add support for Lich's Price of Power, Stormweaver's Multiplying Squalls, and Acolyte of Chayula's Unravelling (Peechey)
+* Add support for Deadeye's Thrilling Chase and Heightened Charges support (Peechey)
+* Add support for Prisoner's Manacles and Sine Aequo's Immobilise mods and Kaltenhalt's Freeze Buildup for Parry mod (Peechey)
+* Add support for Commanding Rage and Expendable Army passive nodes (Peechey)
+* Add support for many "All Damage can Contribute" mods (Peechey)
+* Add support for many Lineage mods (Peechey)
+* Add support for many Unique mods (Peechey)
+* Add support for Ironbound unique mods (Peechey)
+* Add support for Liminal Coil unique mods (Peechey)
+* Add support for Twisted Empyrean, Periphery, and Sylvan's Effigy unique mods (Peechey)
+* Add support for Thunderstorm's Drenched mods (Peechey)
+* Add support for Zenith  (Peechey)
+* Add support for Ritualistic Curse's More Delay (Peechey)
+* Add support for Biting Frost and Glacial Cascade's Final Burst (Peechey)
+* Add support for Zarokh's Revolt (Peechey)
+* Add support for Temporal Chains (Peechey)
+
+--- Fixed Crashes ---
+* Fix crash when importing some builds to party tab (unrealdreamz)
+* Fix crash on import from private league (unrealdreamz)
+* Fix crash on loading build due to some minion skills (unrealdreamz)
+* Fix crash wehn opening some old builds (unrealdreamz)
+
+--- User Interface ---
+* Fix import and crafting text colour (Blitz54)
+* Fix Ascendancy and Loadout Dropdowns visibility on smaller screens (Peechey)
+* Surface OAuth token exchange errors (unrealdreamz)
+
+--- Fixed Calculations ---
+* Fix support gems importing as level other than 1 (Blitz54)
+* Fix Blasphemy rounding (Blitz54)
+* Fix scaling for Inexorable Critical II (Peechey)
+* Fix projectile spell block EHP (unrealdreamz)
+* Fix caluclation of some stats when using Ingenuity (unrealdreamz)
+* Fix generic Minion damage mods applying to Inspiring Ally (unrealdreamz)
+* Fix Undying Hate attribute passive bonuses not working (unrealdreamz)
+* Fix Palm skills not using Quarterstaff Damage and Crit (unrealdreamz)
+
+--- Fixed Behaviours ---
+* Fixed Rage Regeneration not applying the more damage granted from Rage (TarikBeentjes61)
+* Fix offhand unequip during node power process with Giant's Blood (LocalIdentity)
+* Fix Mace Strike import and "Two Hand" naming on items (Blitz54)
+* Fix low life defence mods not applying sometimes when using Starkonja's, Rise of the Pheonix and Coward Legacy (NamNgHH)
+* [pob1-port] Set skillFlag from gem stat map (github-actions[bot])
+* Fix PoB Trader not prioritising local weapon mods (github-actions[bot])
+* Fix matchURL for BuildSites (Peechey)
+* Fix missing Eternal Mark support (Peechey)
+* Fix persistent buff supports of the same category not stacking (Peechey)
+* Fix Corrupted Blood config not showing for Corrupting Cry Supports (Peechey)
+* Fix pasted items not selecting correct runes (unrealdreamz)
+* Fix item-granted skills counting toward socket group limit (unrealdreamz)
+* Fix Uhtred supports counting Meta gems as supports (unrealdreamz)
+* Gate Barrage incorrectly granting damage to some skills (unrealdreamz)
+* Fix Stomping Ground and Ferocious Roar not working when using a Talisman (unrealdreamz)
+
+--- Accuracy Improvements ---
+* Remove DNT weapon bases (Blitz54)
+* Fix parsing of Molten One's Gift fire damage armour break mod (Eucelia)
+* Fix Keeper of the Arc legacy mod value (Blitz54)
+* Fix Item granted skills not showing up as Implicits when pasting (unrealdreamz)
+* Fix Show All Configurations hiding some options (unrealdreamz)
+
+--- Other changes ---
+* Fix variant text ordering for The Adorned and Yoke of Suffering (poikende)
+
 VERSION[0.15.0][2026/01/14]
 
 --- New to Path of Building ---
