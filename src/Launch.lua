@@ -114,6 +114,9 @@ function launch:OnFrame()
 			end
 		end
 	end
+	self.hideIgnoredNodes = IsKeyDown("h")
+
+	
 	self.devModeAlt = self.devMode and IsKeyDown("ALT")
 	SetDrawLayer(1000)
 	SetViewport()

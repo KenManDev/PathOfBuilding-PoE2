@@ -534,6 +534,15 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 		end
 	elseif treeClick == "RIGHT" then
 		-- User right-clicked on a node
+
+
+		if hoverNode then
+			if IsKeyDown("h") then
+				spec.ignoredNodes = spec.ignoredNodes or {}
+				spec.ignoredNodes[hoverNode.id] = not spec.ignoredNodes[hoverNode.id]
+				return
+			end
+		end
 		if hoverNode then
 			if hoverNode.alloc and (hoverNode.type == "Socket" or hoverNode.containJewelSocket) then
 				local slot = build.itemsTab.sockets[hoverNode.id]
@@ -740,6 +749,12 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 			-- Fade out lines in ascendancy classes other than the current one
 			setConnectorColor(0.75, 0.75, 0.75)
 		end
+
+		local ignoredNodes = spec.ignoredNodes or {}
+
+		if launch.hideIgnoredNodes and ignoredNodes[node1.id] and ignoredNodes[node2.id] then
+			setConnectorColor(0.031, 0.043, 0.063, 0.95)
+		end
 		SetDrawColor(unpack(connectorColor))
 		handle = tree:GetAssetByName(connector.connectionArt .. connector.type..state).handle
 		DrawImageQuad(handle, unpack(connector.c))
@@ -917,7 +932,6 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				overlay = node.overlay[state]
 			end
 		end
-
 		-- Convert node position to screen-space
 		local scrX, scrY = treeToScreen(node.x, node.y)
 	
@@ -1098,6 +1112,22 @@ function PassiveTreeViewClass:Draw(build, viewPort, inputEvents)
 				SetDrawColor(1, 1, 1)
 			end
 		end
+
+		if launch.hideIgnoredNodes and spec.ignoredNodes and spec.ignoredNodes[nodeId] then
+	SetDrawLayer(nil, 35)
+	SetDrawColor(0.031, 0.043, 0.063, 1)
+
+	local size = m_floor((node.size or 14) * scale)
+	DrawImage(nil, scrX - size, scrY - size, size * 2, size * 2)
+
+	SetDrawColor(1, 1, 1, 1)
+	SetDrawLayer(nil, 25)
+end
+
+
+
+
+		
 		if self.searchStrResults[nodeId] then
 			-- Node matches the search string, show the highlight circle
 			SetDrawLayer(nil, 30)
